@@ -20,8 +20,8 @@ public class HtmlUtf8CanonTest {
                 "</head><body>&aacute;rv&iacute;zt&#x0171;r&#x0151; &lt;</body></html>";
 
         // this is not good, keeps only the text content
-        String s = Jsoup.parse(html).text();
-        System.out.println(s);
+        String s1 = Jsoup.parse(html).text();
+        System.out.println("s1: " + s1);
         
         // this is better, but it unescapes the &lt; which is not what I want
         String s2 = StringEscapeUtils.unescapeHtml4(html);
