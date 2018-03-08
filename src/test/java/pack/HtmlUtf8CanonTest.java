@@ -17,7 +17,7 @@ public class HtmlUtf8CanonTest {
 
         String html = 
                 "<html><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">" +
-                "</head><body>&aacute;rv&iacute;zt&#x0171;r&#x0151; &lt;</body></html>";
+                "</head><body>&aacute;rv&iacute;zt&#x0171;r&#x0151;&lt;b</body></html>";
 
         // this is not good, keeps only the text content
         String s1 = Jsoup.parse(html).text();
